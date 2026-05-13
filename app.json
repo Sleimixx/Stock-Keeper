@@ -1,0 +1,44 @@
+{
+  "expo": {
+    "name": "Stock Keeper",
+    "slug": "stock-keeper",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.stockkeeper.app",
+      "infoPlist": {
+        "NSCameraUsageDescription": "Used to scan product barcodes"
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.stockkeeper.app",
+      "permissions": ["CAMERA"]
+    },
+    "plugins": [
+      "expo-router",
+      "expo-sqlite",
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow Stock Keeper to scan barcodes."
+        }
+      ]
+    ],
+    "scheme": "stockkeeper",
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}
